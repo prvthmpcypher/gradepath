@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GradePath — Calculate your SGPA and CGPA in seconds, for any university's grading scale. Free, no login required.">
+  <title>GradePath — SGPA &amp; CGPA Calculator</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <!-- logo -->
+        <svg class="navbar-logo" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="lg" x1="0" y1="0" x2="36" y2="36">
+              <stop offset="0%" stop-color="#2F6FED"/>
+              <stop offset="100%" stop-color="#1E9E62"/>
+            </linearGradient>
+          </defs>
+          <rect width="36" height="36" rx="8" fill="url(#lg)"/>
+          <!-- Bars going up -->
+          <rect x="6" y="21" width="4.5" height="9" rx="1.2" fill="rgba(255,255,255,0.45)"/>
+          <rect x="12.5" y="15" width="4.5" height="15" rx="1.2" fill="rgba(255,255,255,0.65)"/>
+          <rect x="19" y="10" width="4.5" height="20" rx="1.2" fill="#fff"/>
+          <rect x="25.5" y="5.5" width="4.5" height="24.5" rx="1.2" fill="#fff"/>
+          <!-- Trend line overlay -->
+          <polyline points="8.25,20.5 14.75,14.5 21.25,9.5 27.75,5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+          <!-- Small dot at top of line -->
+          <circle cx="27.75" cy="5" r="1.8" fill="#fff"/>
+        </svg>
+        <div class="navbar-brand-text">
+          <span class="navbar-brand-name">Grade<span>Path</span></span>
+          <span class="navbar-brand-tagline">SGPA &amp; CGPA Calculator</span>
+        </div>
+      </a>
+      <button class="navbar-toggle" id="navToggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="navbar-links" id="navLinks">
+        <li><a href="index.html" class="active">🏠 Home</a></li>
+        <li><a href="calculator.html">📊 Calculator</a></li>
+        <li><a href="about.html">ℹ️ About</a></li>
+        <li><a href="contact.html">📬 Contact</a></li>
+        <li><a href="docs.html">📖 Docs</a></li>
+        <li>
+          <a href="https://github.com/prvthmpcypher/gradepath" target="_blank" rel="noopener noreferrer" class="github-stars" aria-label="GitHub stars">
+            <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <span class="star-count">★</span>
+            <span class="star-label">Star on GitHub</span>
+          </a>
+        </li>
+        <li><a href="calculator.html" class="cta-btn">Calculate Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== MAIN ===== -->
+  <main>
+    <div class="container">
+
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero-badge">🎓 Built for students, by a student</div>
+        <h1>Your SGPA &amp; CGPA,<br><span>Instantly &amp; Accurately</span></h1>
+        <p>
+          GradePath supports multiple university grading scales out of the box — 
+          VTU, Anna University, Generic 10-point, and custom scales. No login, 
+          no data leaves your browser. Just pick, enter, and calculate.
+        </p>
+        <div class="hero-actions">
+          <a href="calculator.html" class="btn btn-primary btn-lg">📊 Start Calculating</a>
+          <a href="about.html" class="btn btn-outline btn-lg">Learn More</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-value">3+</div>
+            <div class="hero-stat-label">Built-in Scales</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">∞</div>
+            <div class="hero-stat-label">Custom Scales</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">100%</div>
+            <div class="hero-stat-label">Client-Side</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">₹0</div>
+            <div class="hero-stat-label">Always Free</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="features-section">
+        <h2 class="section-title">Why GradePath?</h2>
+        <p class="section-subtitle">Built different. Built for students.</p>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3>Multiple Grading Scales</h3>
+            <p>VTU (CBCS), Anna University, Generic 10-point presets included. Pick yours and go — no manual setup needed.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔧</div>
+            <h3>Custom Scale Builder</h3>
+            <p>Your university not listed? Define your own grade-label and grade-point pairs in seconds. It works just like a preset.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Live Results</h3>
+            <p>SGPA updates per semester as you type. Overall CGPA is always visible. No "Calculate" button to hunt for.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h3>Mobile-Friendly</h3>
+            <p>Built for the phone in your pocket. Enter your grades between classes — works perfectly on any screen size.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3>100% Private</h3>
+            <p>No accounts, no login, no server. Everything runs in your browser. Your grades never leave your device.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">💾</div>
+            <h3>Auto-Saves</h3>
+            <p>Your data is saved automatically in your browser. Refresh the page or come back later — nothing is lost.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="built-by">Built by <strong>Poorvith M P</strong></p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="calculator.html">Calculator</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="docs.html">Docs</a>
+      </div>
+      <p style="margin-top:8px;font-size:12px;color:#999;">GradePath &mdash; SGPA &amp; CGPA Calculator &bull; Free &amp; Open</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('navToggle').addEventListener('click', function() {
+      this.classList.toggle('active');
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+  </script>
+  <script src="ui.js"></script>
+</body>
+</html>

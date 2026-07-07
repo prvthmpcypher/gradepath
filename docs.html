@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GradePath Docs — How to Use guide, Privacy Policy, and Community Guidelines.">
+  <title>Docs — GradePath</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <svg class="navbar-logo" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="lg" x1="0" y1="0" x2="36" y2="36">
+              <stop offset="0%" stop-color="#2F6FED"/>
+              <stop offset="100%" stop-color="#1E9E62"/>
+            </linearGradient>
+          </defs>
+          <rect width="36" height="36" rx="8" fill="url(#lg)"/>
+          <rect x="6" y="21" width="4.5" height="9" rx="1.2" fill="rgba(255,255,255,0.45)"/>
+          <rect x="12.5" y="15" width="4.5" height="15" rx="1.2" fill="rgba(255,255,255,0.65)"/>
+          <rect x="19" y="10" width="4.5" height="20" rx="1.2" fill="#fff"/>
+          <rect x="25.5" y="5.5" width="4.5" height="24.5" rx="1.2" fill="#fff"/>
+          <polyline points="8.25,20.5 14.75,14.5 21.25,9.5 27.75,5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+          <circle cx="27.75" cy="5" r="1.8" fill="#fff"/>
+        </svg>
+        <div class="navbar-brand-text">
+          <span class="navbar-brand-name">Grade<span>Path</span></span>
+          <span class="navbar-brand-tagline">SGPA &amp; CGPA Calculator</span>
+        </div>
+      </a>
+      <button class="navbar-toggle" id="navToggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="navbar-links" id="navLinks">
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="calculator.html">📊 Calculator</a></li>
+        <li><a href="about.html">ℹ️ About</a></li>
+        <li><a href="contact.html">📬 Contact</a></li>
+        <li><a href="docs.html" class="active">📖 Docs</a></li>
+        <li>
+          <a href="https://github.com/prvthmpcypher/gradepath" target="_blank" rel="noopener noreferrer" class="github-stars" aria-label="GitHub stars">
+            <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <span class="star-count">★</span>
+            <span class="star-label">Star on GitHub</span>
+          </a>
+        </li>
+        <li><a href="calculator.html" class="cta-btn">Calculate Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== MAIN ===== -->
+  <main>
+    <div class="container-narrow">
+
+      <div class="page-header">
+        <h1>📖 Documentation</h1>
+        <p>Everything you need to know about using GradePath, our policies, and community standards.</p>
+      </div>
+
+      <!-- Table of Contents -->
+      <div class="docs-toc">
+        <h2>On This Page</h2>
+        <ol>
+          <li><a href="#how-to-use">📘 How to Use GradePath</a></li>
+          <li><a href="#privacy-policy">🔒 Privacy Policy</a></li>
+          <li><a href="#community-guidelines">🤝 Community Guidelines</a></li>
+        </ol>
+      </div>
+
+      <!-- ===== HOW TO USE ===== -->
+      <article id="how-to-use" class="article-card">
+        <h2>📘 How to Use GradePath</h2>
+        <div class="article-meta">Last updated: July 2026 &bull; 5 min read</div>
+
+        <h3>Getting Started</h3>
+        <p>
+          GradePath is designed to be intuitive — a first-time user should go from 
+          landing on the page to seeing a correct SGPA in under 60 seconds. Here's how.
+        </p>
+
+        <h4>Step 1: Select Your Grading Scale</h4>
+        <p>
+          On the <a href="calculator.html">Calculator page</a>, the first thing you'll 
+          see is a dropdown labeled <strong>"Select Scale"</strong>. Choose your 
+          university's grading system from the list of presets:
+        </p>
+        <ul>
+          <li><strong>VTU (10-point) — CBCS</strong>: S=10, A=9, B=8, C=7, D=6, E=5, F=0</li>
+          <li><strong>Anna University</strong>: O=10, A+=9, A=8, B+=7, B=6, C=5, U=0</li>
+          <li><strong>Generic 10-point</strong>: O=10, A+=9, A=8, B+=7, B=6, C=5, P=4, F=0</li>
+        </ul>
+        <p>
+          If your university isn't listed, select <strong>"— Build Custom Scale —"</strong> 
+          to define your own grade-label and grade-point pairs (see Step 5 below).
+        </p>
+
+        <h4>Step 2: Add a Semester</h4>
+        <p>
+          Click the <strong>"+ Add Semester"</strong> button. A new semester card will 
+          appear. You can add as many semesters as you need — each one gets its own card 
+          with its own SGPA display.
+        </p>
+
+        <h4>Step 3: Add Subjects</h4>
+        <p>
+          Inside a semester card, click <strong>"+ Add Subject"</strong> to add a row. 
+          Each subject row has three fields:
+        </p>
+        <ul>
+          <li><strong>Subject name</strong> (optional) — just for your reference</li>
+          <li><strong>Credits</strong> — the credit value for that subject (e.g. 3, 4, 1.5)</li>
+          <li><strong>Grade</strong> — select the grade you received from the dropdown</li>
+        </ul>
+        <p>
+          Use the <strong>✕</strong> button on any row to remove a subject.
+        </p>
+
+        <h4>Step 4: Watch Results Update Live</h4>
+        <p>
+          There's no "Calculate" button. As soon as you fill in credits and select a 
+          grade, the <strong>SGPA</strong> for that semester updates automatically. 
+          The <strong>overall CGPA</strong> at the bottom updates across all your 
+          semesters as you add or change data.
+        </p>
+
+        <h4>Step 5: Build a Custom Scale (if needed)</h4>
+        <p>
+          Select <strong>"— Build Custom Scale —"</strong> from the scale dropdown. 
+          A builder panel will appear where you can:
+        </p>
+        <ol>
+          <li>Add grade-label and grade-point pairs (e.g. "A+" → 9, "B" → 7)</li>
+          <li>Click <strong>"💾 Save Scale"</strong> and give it a name</li>
+          <li>Your custom scale is now available in the dropdown, just like a preset</li>
+        </ol>
+        <div class="tip">
+          <strong>Tip:</strong> Custom scales are saved in your browser's localStorage. 
+          They'll be available the next time you visit the page on the same device.
+        </div>
+
+        <h4>Step 6: Remove or Edit</h4>
+        <p>
+          You can remove individual subjects with the ✕ button, or remove an entire 
+          semester using the <strong>"Remove Semester"</strong> button in its header. 
+          All calculations update instantly.
+        </p>
+
+        <div class="note">
+          <strong>Note:</strong> Grade-point scales for universities are subject to 
+          revision across academic schemes and regulation years. The presets are 
+          based on commonly-cited scales. If a scale is wrong or outdated, use the 
+          custom scale builder — and let us know so we can update the preset.
+        </div>
+
+        <h3>Keyboard &amp; Mobile Tips</h3>
+        <ul>
+          <li>Tap targets are at least 44px — comfortable for mobile use</li>
+          <li>Subject rows wrap vertically on small screens — no horizontal scrolling needed</li>
+          <li>Your data auto-saves via localStorage — refreshing the page won't lose it</li>
+        </ul>
+      </article>
+
+      <!-- ===== PRIVACY POLICY ===== -->
+      <article id="privacy-policy" class="article-card">
+        <h2>🔒 Privacy Policy</h2>
+        <div class="article-meta">Last updated: July 2026 &bull; 3 min read</div>
+
+        <p>
+          GradePath takes your privacy seriously. This policy explains what data 
+          we collect, how it's used, and your rights.
+        </p>
+
+        <h3>Information We Collect</h3>
+        <p><strong>We collect nothing.</strong> GradePath is a fully static, 
+        client-side web application. There are no servers, no databases, no 
+        analytics trackers, and no cookies (except localStorage, which stays 
+        entirely on your device).</p>
+        <ul>
+          <li>We do <strong>not</strong> collect your name, email, or any personal information</li>
+          <li>We do <strong>not</strong> collect your grades, subject names, or academic data</li>
+          <li>We do <strong>not</strong> use cookies or tracking scripts</li>
+          <li>We do <strong>not</strong> have access to your data — it never leaves your browser</li>
+        </ul>
+
+        <h3>Local Storage</h3>
+        <p>
+          GradePath uses your browser's <code>localStorage</code> API to save your 
+          entered data (grading scale selection, custom scales, semesters, subjects) 
+          so it persists across page refreshes. This data:
+        </p>
+        <ul>
+          <li>Stays <strong>on your device only</strong> — it is never transmitted anywhere</li>
+          <li>Can be cleared at any time by clearing your browser's site data</li>
+          <li>Is not accessible by any other website or third party</li>
+        </ul>
+
+        <h3>Third-Party Services</h3>
+        <p>
+          GradePath does not integrate with any third-party services, APIs, or 
+          external resources (other than standard web fonts from the system font stack). 
+          If hosted on GitHub Pages, Netlify, or similar static hosts, those 
+          platforms may have their own logging practices — refer to their respective 
+          privacy policies for details.
+        </p>
+
+        <h3>Changes to This Policy</h3>
+        <p>
+          If this policy changes in the future, the "Last updated" date at the top 
+          will be revised. Since GradePath collects no data, changes are likely to 
+          be minimal or procedural.
+        </p>
+
+        <h3>Contact</h3>
+        <p>
+          If you have questions about this privacy policy, reach out via the 
+          <a href="contact.html">Contact page</a>.
+        </p>
+      </article>
+
+      <!-- ===== COMMUNITY GUIDELINES ===== -->
+      <article id="community-guidelines" class="article-card">
+        <h2>🤝 Community Guidelines</h2>
+        <div class="article-meta">Last updated: July 2026 &bull; 3 min read</div>
+
+        <p>
+          GradePath is built for students, by a student. While the tool itself 
+          doesn't have forums or user-generated content (yet), these guidelines 
+          apply to interactions through GitHub issues, feature requests, and 
+          any future community spaces.
+        </p>
+
+        <h3>Be Respectful</h3>
+        <p>
+          Treat everyone with respect. Disagreements are fine — personal attacks, 
+          harassment, and hate speech are not. This is a small project built for 
+          learning and helping fellow students.
+        </p>
+
+        <h3>Be Constructive</h3>
+        <p>
+          When reporting a bug or suggesting a feature, include as much context 
+          as possible:
+        </p>
+        <ul>
+          <li>What grading scale you were using</li>
+          <li>What values you entered (or a screenshot with sensitive info redacted)</li>
+          <li>What result you expected vs. what you got</li>
+          <li>Your browser and device (helpful but not required)</li>
+        </ul>
+
+        <h3>No Spam or Self-Promotion</h3>
+        <p>
+          GitHub issues and discussions are for improving GradePath. Please don't 
+          use them for advertising, link dropping, or any form of spam.
+        </p>
+
+        <h3>Privacy Matters</h3>
+        <p>
+          When sharing screenshots or examples (e.g. in a bug report), <strong>do not 
+          include personal information</strong> — redact your name, student ID, 
+          university name, or any other identifiers. GradePath itself doesn't 
+          collect this data, and we want to keep it that way.
+        </p>
+
+        <h3>Be Patient</h3>
+        <p>
+          GradePath is maintained by a single student (Poorvith M P). Responses 
+          to issues and feature requests may take time. Contributions and 
+          constructive feedback are welcome and appreciated, but please be 
+          understanding of the maintainer's bandwidth.
+        </p>
+
+        <h3>Contributing</h3>
+        <p>
+          Interested in contributing? The project is open-source. Feel free to:
+        </p>
+        <ul>
+          <li>Open a GitHub issue with your idea or bug report</li>
+          <li>Submit a pull request with improvements</li>
+          <li>Suggest new grading scale presets (include citation/source)</li>
+        </ul>
+        <p>
+          By contributing, you agree that your contributions will be licensed 
+          under the same terms as the project (MIT License).
+        </p>
+
+        <div class="tip">
+          <strong>✨ Remember:</strong> Every contributor, commenter, and user 
+          was once a beginner. Let's build something useful together.
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="built-by">Built by <strong>Poorvith M P</strong></p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="calculator.html">Calculator</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="docs.html">Docs</a>
+      </div>
+      <p style="margin-top:8px;font-size:12px;color:#999;">GradePath &mdash; SGPA &amp; CGPA Calculator &bull; Free &amp; Open</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('navToggle').addEventListener('click', function() {
+      this.classList.toggle('active');
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+  </script>
+  <script src="ui.js"></script>
+</body>
+</html>

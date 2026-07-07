@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GradePath Calculator — Select your grading scale, add subjects, and see your SGPA and CGPA instantly.">
+  <title>Calculator — GradePath</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <svg class="navbar-logo" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="lg" x1="0" y1="0" x2="36" y2="36">
+              <stop offset="0%" stop-color="#2F6FED"/>
+              <stop offset="100%" stop-color="#1E9E62"/>
+            </linearGradient>
+          </defs>
+          <rect width="36" height="36" rx="8" fill="url(#lg)"/>
+          <rect x="6" y="21" width="4.5" height="9" rx="1.2" fill="rgba(255,255,255,0.45)"/>
+          <rect x="12.5" y="15" width="4.5" height="15" rx="1.2" fill="rgba(255,255,255,0.65)"/>
+          <rect x="19" y="10" width="4.5" height="20" rx="1.2" fill="#fff"/>
+          <rect x="25.5" y="5.5" width="4.5" height="24.5" rx="1.2" fill="#fff"/>
+          <polyline points="8.25,20.5 14.75,14.5 21.25,9.5 27.75,5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+          <circle cx="27.75" cy="5" r="1.8" fill="#fff"/>
+        </svg>
+        <div class="navbar-brand-text">
+          <span class="navbar-brand-name">Grade<span>Path</span></span>
+          <span class="navbar-brand-tagline">SGPA &amp; CGPA Calculator</span>
+        </div>
+      </a>
+      <button class="navbar-toggle" id="navToggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="navbar-links" id="navLinks">
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="calculator.html" class="active">📊 Calculator</a></li>
+        <li><a href="about.html">ℹ️ About</a></li>
+        <li><a href="contact.html">📬 Contact</a></li>
+        <li><a href="docs.html">📖 Docs</a></li>
+        <li>
+          <a href="https://github.com/prvthmpcypher/gradepath" target="_blank" rel="noopener noreferrer" class="github-stars" aria-label="GitHub stars">
+            <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <span class="star-count">★</span>
+            <span class="star-label">Star on GitHub</span>
+          </a>
+        </li>
+        <li><a href="calculator.html" class="cta-btn">Calculate Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== MAIN ===== -->
+  <main>
+    <div class="container">
+
+      <div class="page-header">
+        <h1>📊 SGPA / CGPA Calculator</h1>
+        <p>Select your grading scale, add your subjects, and watch your results update live.</p>
+      </div>
+
+      <!-- Scale Selection -->
+      <section class="scale-section" aria-label="Grading scale selection">
+        <h2 class="section-title">Grading Scale</h2>
+        <div class="scale-row">
+          <label for="scale-select">Select Scale:</label>
+          <select id="scale-select" class="scale-select" aria-label="Choose a grading scale"></select>
+        </div>
+      </section>
+
+      <!-- Custom Scale Builder -->
+      <section id="custom-builder" class="custom-builder" aria-label="Custom scale builder">
+        <h3 class="custom-builder-title">Build Your Custom Scale</h3>
+        <p class="section-subtitle">Add grade-label and grade-point pairs for your university.</p>
+        <div id="custom-grades-container"></div>
+        <button id="add-custom-grade-btn" class="btn btn-secondary btn-sm" type="button">+ Add Grade</button>
+        <div class="custom-builder-actions">
+          <button id="save-custom-scale-btn" class="btn btn-success" type="button">💾 Save Scale</button>
+          <button id="cancel-custom-scale-btn" class="btn btn-secondary" type="button">Cancel</button>
+        </div>
+      </section>
+
+      <!-- Semesters -->
+      <section class="semesters-section" aria-label="Semester entries">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:16px;">
+          <h2 class="section-title" style="margin-bottom:0;">Semesters</h2>
+          <button id="add-semester-btn" class="btn btn-primary" type="button">+ Add Semester</button>
+        </div>
+        <div id="semesters-container"></div>
+        <div id="empty-state" class="empty-state hidden">
+          <div class="empty-icon">📚</div>
+          <div class="empty-title">No semesters yet</div>
+          <div class="empty-desc">Add your first semester to get started. Pick a grading scale above, then click "Add Semester" to begin entering your subjects and grades.</div>
+        </div>
+      </section>
+
+      <!-- Results -->
+      <section id="results-section" class="results-section" aria-label="Results summary">
+        <h2 class="section-title">Results</h2>
+        <div class="results-grid">
+          <div class="result-item">
+            <div class="result-label">Total Semesters</div>
+            <div id="total-semesters" class="result-value">0</div>
+          </div>
+          <div class="result-item cgpa">
+            <div class="result-label">Overall CGPA</div>
+            <div id="overall-cgpa" class="result-value empty">—</div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="built-by">Built by <strong>Poorvith M P</strong></p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="calculator.html">Calculator</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="docs.html">Docs</a>
+      </div>
+      <p style="margin-top:8px;font-size:12px;color:#999;">GradePath &mdash; SGPA &amp; CGPA Calculator &bull; Free &amp; Open</p>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="presets.js"></script>
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('navToggle').addEventListener('click', function() {
+      this.classList.toggle('active');
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+  </script>
+  <script src="ui.js"></script>
+</body>
+</html>

@@ -4,9 +4,32 @@
   const SUPABASE_URL = 'https://xyzcompany.supabase.co';
   const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.dummy';
   
+  const cookieStorage = {
+    getItem: (key) => {
+      const name = key + '=';
+      const decodedCookie = decodeURIComponent(document.cookie);
+      const ca = decodedCookie.split(';');
+      for (let i = 0; i < ca.length; i++) {
+        let c = ca[i].trim();
+        if (c.indexOf(name) === 0) return c.substring(name.length, c.length);
+      }
+      return null;
+    },
+    setItem: (key, value) => {
+      document.cookie = `${key}=${encodeURIComponent(value)}; path=/; domain=.poorvithmp.com; max-age=31536000; SameSite=Lax; Secure`;
+    },
+    removeItem: (key) => {
+      document.cookie = `${key}=; path=/; domain=.poorvithmp.com; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=Lax; Secure`;
+    }
+  };
+
   let supabaseClient = null;
   if (window.supabase) {
-    supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+      auth: {
+        storage: cookieStorage
+      }
+    });
   }
 
   const TOOLS_LIST = [
@@ -21,7 +44,7 @@
   // Daily Trial Logic
   window.getGradePathTrialInfo = function () {
     const today = new Date().toISOString().slice(0, 10);
-    const key = `cypher_trial_gradepath_${today}`;
+    const key = `poorvithmp_trial_gradepath_${today}`;
     const count = parseInt(localStorage.getItem(key) || '0', 10);
     const max = 3;
     return {
@@ -34,7 +57,7 @@
 
   window.recordGradePathTrial = function () {
     const today = new Date().toISOString().slice(0, 10);
-    const key = `cypher_trial_gradepath_${today}`;
+    const key = `poorvithmp_trial_gradepath_${today}`;
     const { count } = window.getGradePathTrialInfo();
     localStorage.setItem(key, (count + 1).toString());
     return window.getGradePathTrialInfo();
@@ -45,7 +68,7 @@
       showModal({
         title: '⚡ Daily Free Trial Reached',
         body: `
-          <p style="margin-bottom:12px; color:#475569;">You've used your 3 free GPA calculations for today. Sign in to your <strong>PoorvithMP</strong> account for unlimited, unblocked access across all Cypher tools!</p>
+          <p style="margin-bottom:12px; color:#475569;">You've used your 3 free GPA calculations for today. Sign in to your <strong>PoorvithMP</strong> account for unlimited, unblocked access across all PoorvithMP Tools!</p>
           <div style="margin-top:16px; text-align:center;">
             <a href="https://poorvithmp.com/auth" target="_blank" style="display:inline-block; padding:10px 20px; background:#2F6FED; color:#fff; font-weight:bold; border-radius:8px; text-decoration:none;">Sign In / Create Account</a>
           </div>

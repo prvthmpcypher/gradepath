@@ -79,7 +79,7 @@
     { id: 'gradepath', name: 'GradePath', desc: 'Academic GPA Goal Planner', icon: '🎓', color: '#d97706', url: 'https://gradepath.poorvithmp.com' },
     { id: 'safegen', name: 'SafeGen', desc: 'Crypto Key & Password Vault', icon: '🔐', color: '#e11d48', url: 'https://safegen.poorvithmp.com' },
     { id: 'infinitecanvas', name: 'InfiniteCanvas', desc: 'Endless Visual Canvas', icon: '🎨', color: '#9333ea', url: 'https://infinitecanvas.poorvithmp.com' },
-    { id: 'poorvithmp', name: 'PoorvithMP', desc: 'Main Portfolio & Hub', icon: '🏠', color: '#1e293b', url: 'https://poorvithmp.com' }
+    { id: 'poorvithmp', name: 'PoorvithMP', desc: 'Main Portfolio & Hub', icon: '<svg width="20" height="20" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block; vertical-align:middle;"><rect width="64" height="64" rx="18" fill="#020617"/><rect x="2" y="2" width="60" height="60" rx="16" stroke="#334155" stroke-width="3" stroke-opacity="0.8"/><text x="32" y="44" font-family="sans-serif" font-size="34" font-weight="900" fill="#F8FAFC" text-anchor="middle">P</text><circle cx="48" cy="48" r="4" fill="#10B981"/></svg>', color: '#1e293b', url: 'https://poorvithmp.com' }
   ];
 
   // Daily Trial Logic

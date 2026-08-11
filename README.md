@@ -1,43 +1,27 @@
-# GradePath — SGPA & CGPA Calculator
+# GradePath
 
-Calculate your SGPA and CGPA in seconds, for any university's grading scale.
+GradePath is a multi-page, browser-local SGPA and CGPA calculator. It supports preset and custom grading scales, multiple semesters, subject credits, live credit-weighted results, and local saving without an account.
 
-Built with plain HTML, CSS, and vanilla JavaScript — no frameworks, no build tools, no login required.
+## Formula
 
-## Features
+`SGPA = Σ(credit × grade point) ÷ Σ(credit)`
 
-- **Multiple Grading Scales** — VTU (CBCS), Anna University, Generic 10-point presets included
-- **Custom Scale Builder** — Define your own grade-label and grade-point pairs if your university isn't listed
-- **Live Calculation** — SGPA and CGPA update instantly as you enter data
-- **Multiple Semesters** — Add as many semesters as you need, see running CGPA
-- **Fully Responsive** — Works on mobile, tablet, and desktop
-- **No Login Required** — Everything runs in your browser. No data is sent anywhere.
-- **localStorage Persistence** — Your data stays saved even if you refresh or close the page
+CGPA uses the same formula across all included subjects in all semesters. Incomplete rows and non-positive credits are skipped. Results display two decimal places after calculation.
 
+Grading rules change and may include institution-specific policies. Verify the current official scheme before relying on a result.
 
-## How to Use
+## Privacy
 
-1. Open `index.html` in any modern browser (still under development, once completed you will see Live demo link)
-2. Select your university's grading scale from the dropdown
-3. Click **"Add Semester"** to start entering subjects
-4. For each subject, enter the name (optional), credit value, and grade
-5. SGPA updates live per semester; overall CGPA shows at the top
-6. If your scale isn't listed, select **"Build Custom Scale"** and define your own grades
+Calculator entries can be stored in this browser's local storage. If persistence is unavailable, calculations continue for the page session. Vercel Analytics measures aggregate visits and does not receive calculator entries.
 
-## Grading Scales Included
+## Development and build
 
-| Preset | Grades |
-|---|---|
-| VTU (CBCS) | S=10, A=9, B=8, C=7, D=6, E=5, F=0 |
-| Anna University | O=10, A+=9, A=8, B+=7, B=6, C=5, U=0 |
-| Generic 10-point | O=10, A+=9, A=8, B+=7, B=6, C=5, P=4, F=0 |
+The application is plain HTML, CSS, and JavaScript modules.
 
-> ⚠️ Grade-point scales are subject to revision by universities. Verify against your current official scheme. The custom scale builder exists specifically so a wrong or outdated preset doesn't block you.
+```bash
+npm run build
+```
 
-## Built by
+The deterministic build copies the approved public pages and assets to `dist/`. Vercel serves that directory with clean multi-page URLs and security headers.
 
-**Poorvith M P**
-
-- [X (Twitter)](https://x.com/poorvithmp07)
-- [LinkedIn](https://linkedin.com/in/poorvithmp)
-- [GitHub](https://github.com/prvthmpcypher)
+Built by [Poorvith M P](https://poorvithmp.com) and released under the MIT licence.

@@ -1,7 +1,7 @@
 // presets.js — Grading Scale Data
 // Each scale is an object matching the GradingScale data model from the PRD.
 
-const GRADING_SCALES = [
+export const GRADING_SCALES = [
   {
     id: 'vtu',
     name: 'VTU (10-point) — CBCS',
@@ -49,19 +49,3 @@ const GRADING_SCALES = [
     ]
   }
 ];
-
-// Helper to find a scale by id
-function findScaleById(id) {
-  // Check presets first
-  const preset = GRADING_SCALES.find(s => s.id === id);
-  if (preset) return preset;
-  // Then check custom scales saved in app state
-  const state = getAppState();
-  return state.customScales.find(s => s.id === id) || null;
-}
-
-// Helper to get all available scales (presets + custom)
-function getAllScales() {
-  const state = getAppState();
-  return [...GRADING_SCALES, ...state.customScales];
-}

@@ -33,10 +33,10 @@ export const DocsPage: React.FC = () => {
       },
       {
         '@type': 'Question',
-        name: 'Does GradePath store my marks or grades on a server?',
+        name: 'Does GradeForge store my marks or grades on a server?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'No. GradePath operates entirely browser-locally using HTML5 localStorage. Your courses, credits, and grades never leave your browser and are never transmitted to any external server.',
+          text: 'No. GradeForge operates entirely browser-locally using HTML5 localStorage. Your courses, credits, and grades never leave your browser and are never transmitted to any external server.',
         },
       },
     ],
@@ -45,7 +45,7 @@ export const DocsPage: React.FC = () => {
   return (
     <>
       <MetaTags
-        title="Formulas & Documentation — GradePath"
+        title="Formulas & Documentation — GradeForge"
         description="Detailed SGPA & CGPA mathematical formulas, university percentage conversion rules (VTU, Anna University), and FAQ."
         canonicalPath="/docs"
         schema={faqSchema}
@@ -60,7 +60,7 @@ export const DocsPage: React.FC = () => {
             Formulas, schemes & calculation rules.
           </h1>
           <p className="text-gpmuted text-base sm:text-lg leading-relaxed">
-            GradePath follows standard credit-based choice system (CBCS) formulas used by universities worldwide. Here is exactly how your SGPA, CGPA, and equivalent percentages are calculated.
+            GradeForge follows standard credit-based choice system (CBCS) formulas used by universities worldwide. Here is exactly how your SGPA, CGPA, and equivalent percentages are calculated.
           </p>
         </section>
 
@@ -100,7 +100,7 @@ export const DocsPage: React.FC = () => {
             CGPA = Total Weighted Grade Points (All Semesters) ÷ Total Credits (All Semesters)
           </div>
           <p className="text-xs sm:text-sm text-gpmuted leading-relaxed m-0">
-            Note: Simple arithmetic average of semester SGPAs is mathematically inaccurate when semesters have unequal credit loads. GradePath always computes true credit-weighted cumulative averages.
+            Note: Simple arithmetic average of semester SGPAs is mathematically inaccurate when semesters have unequal credit loads. GradeForge always computes true credit-weighted cumulative averages.
           </p>
         </section>
 
@@ -139,7 +139,7 @@ export const DocsPage: React.FC = () => {
                 <CheckCircle2 className="w-4 h-4 text-gpblue shrink-0" /> Are my grades saved if I close the tab?
               </h3>
               <p className="text-gpmuted text-xs sm:text-sm leading-relaxed m-0 pl-5">
-                Yes! GradePath automatically syncs every course name, credit, and grade into your browser's local storage. When you return on the same device, your work is restored instantly.
+                Yes! GradeForge automatically syncs every course name, credit, and grade into your browser's local storage. When you return on the same device, your work is restored instantly.
               </p>
             </div>
 

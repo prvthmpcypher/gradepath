@@ -6,9 +6,9 @@ export const AboutPage: React.FC = () => {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'AboutPage',
-    name: 'About GradePath',
-    url: 'https://gradepath.poorvithmp.com/about',
-    description: 'GradePath is an academic notebook for calculating SGPA and CGPA with full browser-local privacy.',
+    name: 'About GradeForge',
+    url: 'https://gradeforge.poorvithmp.com/about',
+    description: 'GradeForge is an academic notebook for calculating SGPA and CGPA with full browser-local privacy.',
     author: {
       '@type': 'Person',
       name: 'Poorvith M P',
@@ -19,8 +19,8 @@ export const AboutPage: React.FC = () => {
   return (
     <>
       <MetaTags
-        title="About — GradePath"
-        description="Learn about GradePath, its privacy-first browser-local architecture, and why it was built as an academic notebook for students."
+        title="About — GradeForge"
+        description="Learn about GradeForge, its privacy-first browser-local architecture, and why it was built as an academic notebook for students."
         canonicalPath="/about"
         schema={schema}
       />
@@ -28,13 +28,13 @@ export const AboutPage: React.FC = () => {
       <main className="w-[min(1100px,90vw)] mx-auto py-8 sm:py-12">
         <section className="max-w-3xl mb-12">
           <p className="text-xs font-mono font-semibold uppercase tracking-widest text-gpblue mb-1">
-            About GradePath
+            About GradeForge
           </p>
           <h1 className="text-3xl sm:text-5xl font-serif font-bold text-ink tracking-tight mb-6">
             An academic notebook for grade points.
           </h1>
           <p className="text-gpmuted text-base sm:text-lg leading-relaxed mb-4">
-            I built GradePath for students who want a calculation they can repeat, inspect, and trust without having to configure a new spreadsheet every semester or hand their academic records to proprietary portals.
+            I built GradeForge for students who want a calculation they can repeat, inspect, and trust without having to configure a new spreadsheet every semester or hand their academic records to proprietary portals.
           </p>
         </section>
 
@@ -45,7 +45,7 @@ export const AboutPage: React.FC = () => {
               <EyeOff className="w-4 h-4" /> Privacy-First by Design
             </div>
             <p className="text-gpmuted text-xs sm:text-sm leading-relaxed m-0">
-              GradePath does not require an account or login. Your course names, credits, grades, and custom grading schemes are stored in your device's browser local storage.
+              GradeForge does not require an account or login. Your course names, credits, grades, and custom grading schemes are stored in your device's browser local storage.
             </p>
           </div>
 
@@ -81,7 +81,7 @@ export const AboutPage: React.FC = () => {
         <section className="p-8 border border-gpline bg-paper max-w-3xl">
           <h2 className="text-2xl font-serif font-bold text-ink mb-3">About the Author</h2>
           <p className="text-gpmuted text-sm leading-relaxed mb-4">
-            GradePath was conceptualized and developed by <strong>Poorvith M P</strong>. It is open source and freely accessible to students and educators worldwide.
+            GradeForge was conceptualized and developed by <strong>Poorvith M P</strong>. It is open source and freely accessible to students and educators worldwide.
           </p>
           <div className="flex flex-wrap gap-4 pt-2 font-mono text-xs font-semibold">
             <a

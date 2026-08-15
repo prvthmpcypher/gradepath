@@ -26,7 +26,7 @@ export const Header: React.FC = () => {
             <span className="absolute -right-[5px] -top-[3px] w-2 h-2 rounded-full bg-gpred block"></span>
           </b>
         </span>
-        <strong className="font-serif font-bold text-xl tracking-tight text-ink">GradePath</strong>
+        <strong className="font-serif font-bold text-xl tracking-tight text-ink">GradeForge</strong>
       </Link>
 
       <nav aria-label="Primary" className="flex items-center gap-3 sm:gap-6 font-mono font-semibold text-xs sm:text-sm tracking-wide">

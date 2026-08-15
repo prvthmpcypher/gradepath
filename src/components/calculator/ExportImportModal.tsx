@@ -113,7 +113,7 @@ export const ExportImportModal: React.FC<ExportImportModalProps> = ({ onClose })
               Restore from Backup
             </h3>
             <p className="text-xs text-gpmuted m-0">
-              Restore your semesters and custom scales from a previous GradePath JSON backup.
+              Restore your semesters and custom scales from a previous GradeForge JSON backup.
             </p>
 
             <input

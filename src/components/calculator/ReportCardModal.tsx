@@ -54,7 +54,7 @@ export const ReportCardModal: React.FC<ReportCardModalProps> = ({ onClose }) => 
           {/* Header */}
           <div className="text-center border-b-2 border-slate-800 pb-5 mb-6">
             <h1 className="text-2xl sm:text-3xl font-serif font-bold tracking-tight text-slate-950 m-0">
-              GradePath Academic Performance Record
+              GradeForge Academic Performance Record
             </h1>
             <p className="text-xs font-mono text-slate-600 mt-1.5 uppercase tracking-wider">
               Grading Scheme: {activeScale.name} (Max Scale: {activeScale.maxScale})
@@ -133,7 +133,7 @@ export const ReportCardModal: React.FC<ReportCardModalProps> = ({ onClose }) => 
 
           {/* Footer Note */}
           <div className="mt-8 pt-4 border-t border-slate-200 text-center text-[11px] text-slate-500 font-mono">
-            GradePath · Independent local calculation notebook · Verify official scheme with university prior to formal reliance.
+            GradeForge · Independent local calculation notebook · Verify official scheme with university prior to formal reliance.
           </div>
         </div>
       </div>

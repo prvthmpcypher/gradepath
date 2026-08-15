@@ -8,6 +8,7 @@ import { ResultsSummary } from '../components/calculator/ResultsSummary';
 import { QuickstartModal } from '../components/onboarding/QuickstartModal';
 import { ExportImportModal } from '../components/calculator/ExportImportModal';
 import { isOnboardingCompleted } from '../utils/storage';
+import { initializeAttribution } from '../utils/attribution';
 import { Sparkles } from 'lucide-react';
 
 export const CalculatorPage: React.FC = () => {
@@ -16,6 +17,9 @@ export const CalculatorPage: React.FC = () => {
   const [isImportOpen, setIsImportOpen] = useState(false);
 
   useEffect(() => {
+    // Initialize first-party attribution capture on load
+    initializeAttribution();
+
     // Open onboarding modal if user has never visited and has 0 semesters
     if (!isOnboardingCompleted() && state.semesters.length === 0) {
       setIsOnboardingOpen(true);
@@ -25,20 +29,20 @@ export const CalculatorPage: React.FC = () => {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    name: 'GradePath Calculator',
-    url: 'https://gradepath.poorvithmp.com/calculator',
+    name: 'GradeForge Calculator',
+    url: 'https://gradeforge.poorvithmp.com/calculator',
     description: 'Enter subjects, credits, and grades to calculate SGPA and CGPA with VTU, Anna University, and custom scales.',
     isPartOf: {
       '@type': 'SoftwareApplication',
-      name: 'GradePath',
-      url: 'https://gradepath.poorvithmp.com/',
+      name: 'GradeForge',
+      url: 'https://gradeforge.poorvithmp.com/',
     },
   };
 
   return (
     <>
       <MetaTags
-        title="Calculator — GradePath SGPA and CGPA Calculator"
+        title="Calculator — GradeForge SGPA and CGPA Calculator"
         description="Enter subjects, credits, and grades to calculate semester SGPA and cumulative CGPA. Features target planning and multi-university presets."
         canonicalPath="/calculator"
         schema={schema}

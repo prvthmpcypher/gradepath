@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
 import { useGrade } from '../../context/GradeContext';
 import { displayGrade, convertToPercentage } from '../../utils/calculations';
-import { Target, Download, Printer, Trash2, CheckCircle2 } from 'lucide-react';
+import { Target, Download, Printer, Trash2, CheckCircle2, Share2 } from 'lucide-react';
 import { TargetPlannerModal } from './TargetPlannerModal';
 import { ExportImportModal } from './ExportImportModal';
 import { ReportCardModal } from './ReportCardModal';
+import { ShareModal } from './ShareModal';
+import { DiscoverySurvey } from './DiscoverySurvey';
 
 export const ResultsSummary: React.FC = () => {
   const { overall, activeScale, clearAllData } = useGrade();
   const [isPlannerOpen, setIsPlannerOpen] = useState(false);
   const [isExportOpen, setIsExportOpen] = useState(false);
   const [isReportCardOpen, setIsReportCardOpen] = useState(false);
+  const [isShareOpen, setIsShareOpen] = useState(false);
 
   return (
     <section className="border border-gpline bg-paper p-5 sm:p-6 mb-8 transition-colors" aria-labelledby="results-title">
@@ -63,13 +66,21 @@ export const ResultsSummary: React.FC = () => {
       </div>
 
       {/* Action Toolbar */}
-      <div className="flex flex-wrap items-center gap-2.5 pt-2 border-t border-gpline/60">
+      <div className="flex flex-wrap items-center gap-2.5 pt-2 border-t border-gpline/60 mb-6">
         <button
           type="button"
           onClick={() => setIsPlannerOpen(true)}
           className="inline-flex items-center gap-1.5 px-3.5 py-2 border border-gpblue bg-gpblue text-white text-xs font-bold hover:opacity-90 transition-opacity cursor-pointer"
         >
           <Target className="w-3.5 h-3.5" /> Target CGPA Planner
+        </button>
+
+        <button
+          type="button"
+          onClick={() => setIsShareOpen(true)}
+          className="inline-flex items-center gap-1.5 px-3.5 py-2 border border-gpline bg-paper hover:bg-gpwash text-ink text-xs font-bold transition-colors cursor-pointer"
+        >
+          <Share2 className="w-3.5 h-3.5 text-gpblue" /> Share Calculator
         </button>
 
         <button
@@ -105,7 +116,10 @@ export const ResultsSummary: React.FC = () => {
         )}
       </div>
 
-      <div className="mt-4 flex items-center gap-1.5 text-xs font-mono text-gpmuted">
+      {/* Discovery Survey */}
+      <DiscoverySurvey />
+
+      <div className="flex items-center gap-1.5 text-xs font-mono text-gpmuted">
         <CheckCircle2 className="w-3.5 h-3.5 text-gpblue shrink-0" />
         <span id="calculator-status">
           Live reactive calculation enabled. Entries save automatically to your browser.
@@ -116,6 +130,7 @@ export const ResultsSummary: React.FC = () => {
       {isPlannerOpen && <TargetPlannerModal onClose={() => setIsPlannerOpen(false)} />}
       {isExportOpen && <ExportImportModal onClose={() => setIsExportOpen(false)} />}
       {isReportCardOpen && <ReportCardModal onClose={() => setIsReportCardOpen(false)} />}
+      {isShareOpen && <ShareModal onClose={() => setIsShareOpen(false)} />}
     </section>
   );
 };

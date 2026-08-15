@@ -63,7 +63,7 @@ export const QuickstartModal: React.FC<QuickstartModalProps> = ({
           </div>
           <div>
             <p className="text-[11px] font-mono text-gpblue uppercase tracking-wider m-0">
-              Welcome to GradePath
+              Welcome to GradeForge
             </p>
             <h2 id="quickstart-title" className="text-xl sm:text-2xl font-serif font-bold text-ink m-0">
               Set Up Your Calculator
@@ -85,7 +85,7 @@ export const QuickstartModal: React.FC<QuickstartModalProps> = ({
         {step === 1 && (
           <div className="space-y-4">
             <p className="text-xs sm:text-sm text-gpmuted m-0">
-              Select your university grading scheme. GradePath automatically weights credit points and calculates semester SGPA & overall CGPA.
+              Select your university grading scheme. GradeForge automatically weights credit points and calculates semester SGPA & overall CGPA.
             </p>
 
             <div className="space-y-2 max-h-60 overflow-y-auto pr-1">

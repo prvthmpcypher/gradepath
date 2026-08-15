@@ -1,12 +1,12 @@
-<p align="center"><img src="docs/assets/logo.svg" width="88" alt="GradePath logo"></p>
+<p align="center"><img src="docs/assets/logo.svg" width="88" alt="GradeForge logo"></p>
 
-# GradePath
+# GradeForge
 
-![GradePath — your grading scale and a result you can check](docs/assets/cover.svg)
+![GradeForge — your grading scale and a result you can check](docs/assets/cover.svg)
 
-GradePath is a modern, privacy-first browser-local SGPA and CGPA calculator. Built for students who want a calculation they can repeat, inspect, and trust without turning every semester into another spreadsheet.
+GradeForge is a modern, privacy-first browser-local SGPA and CGPA calculator. Built for students who want a calculation they can repeat, inspect, and trust without turning every semester into another spreadsheet.
 
-[Open GradePath](https://gradepath.poorvithmp.com) · [View the calculator](docs/assets/product.png) · [My portfolio](https://poorvithmp.com)
+[Open GradeForge](https://gradeforge.poorvithmp.com) · [View the calculator](docs/assets/product.png) · [My portfolio](https://poorvithmp.com)
 
 ## Main features
 
@@ -17,7 +17,8 @@ GradePath is a modern, privacy-first browser-local SGPA and CGPA calculator. Bui
 - **Visual Analytics**: Interactive SGPA progression graph and credit load distribution visualization.
 - **Data Portability**: JSON Backup & Restore + CSV marksheet downloads.
 - **Printable Transcripts**: Generate clean academic performance records and PDF summaries.
-- **Onboarding Flow**: 3-step quickstart with sample engineering semester loader.
+- **Onboarding Flow**: 2-step quickstart with sample engineering semester loader.
+- **First-Party Attribution & Sharing**: Trackable share links, UTM capture, and dark-social discovery polling.
 - **Search Engine Optimized**: Multi-route static prerendering, structured JSON-LD schemas (`SoftwareApplication`, `FAQPage`), and OpenGraph metadata.
 - **100% Browser-Local Privacy**: No accounts, no database tracking. All data remains in your device's browser.
 
@@ -31,7 +32,7 @@ CGPA uses the same credit-weighted formula across all completed semesters. Incom
 
 ## Installation and Local Development
 
-GradePath is built with React 18, TypeScript, Tailwind CSS, and Vite.
+GradeForge is built with React 18, TypeScript, Tailwind CSS, and Vite.
 
 ```bash
 # Clone the repository
@@ -65,11 +66,11 @@ The production bundle is compiled into `dist/` with static multi-page HTML entry
 
 ## Privacy & Limits
 
-GradePath stores grading scales, semesters, and subject entries entirely in the browser's local storage. No academic data is sent to external servers.
+GradeForge stores grading scales, semesters, and subject entries entirely in the browser's local storage. No academic data is sent to external servers.
 
 ## Licence
 
-GradePath is available under the [MIT Licence](LICENSE).
+GradeForge is available under the [MIT Licence](LICENSE).
 
 ## Author
 

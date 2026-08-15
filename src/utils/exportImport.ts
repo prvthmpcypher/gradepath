@@ -3,7 +3,7 @@ import { validateState } from './storage';
 
 export function exportStateAsJSON(state: GradeState): void {
   const data = {
-    app: 'GradePath',
+    app: 'GradeForge',
     version: '2.0.0',
     exportedAt: new Date().toISOString(),
     state: validateState(state),
@@ -13,7 +13,7 @@ export function exportStateAsJSON(state: GradeState): void {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = `gradepath_backup_${new Date().toISOString().slice(0, 10)}.json`;
+  a.download = `gradeforge_backup_${new Date().toISOString().slice(0, 10)}.json`;
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
@@ -47,7 +47,7 @@ export function exportStateAsCSV(state: GradeState, activeScale: GradingScale): 
   const csvContent = 'data:text/csv;charset=utf-8,' + encodeURIComponent(rows.join('\n'));
   const a = document.createElement('a');
   a.href = csvContent;
-  a.download = `gradepath_grades_${new Date().toISOString().slice(0, 10)}.csv`;
+  a.download = `gradeforge_grades_${new Date().toISOString().slice(0, 10)}.csv`;
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);

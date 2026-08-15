@@ -27,7 +27,7 @@ export const MetaTags: React.FC<MetaTagsProps> = ({
     metaDesc.setAttribute('content', description);
 
     // 3. Set Canonical Link
-    const fullCanonicalUrl = `https://gradepath.poorvithmp.com${canonicalPath}`;
+    const fullCanonicalUrl = `https://gradeforge.poorvithmp.com${canonicalPath}`;
     let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
     if (!canonicalLink) {
       canonicalLink = document.createElement('link');

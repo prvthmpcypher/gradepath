@@ -6,9 +6,9 @@ export const ContactPage: React.FC = () => {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'ContactPage',
-    name: 'GradePath Support & Contact',
-    url: 'https://gradepath.poorvithmp.com/contact',
-    description: 'Get in touch for questions, university scale requests, and feedback about GradePath.',
+    name: 'GradeForge Support & Contact',
+    url: 'https://gradeforge.poorvithmp.com/contact',
+    description: 'Get in touch for questions, university scale requests, and feedback about GradeForge.',
     author: {
       '@type': 'Person',
       name: 'Poorvith M P',
@@ -19,8 +19,8 @@ export const ContactPage: React.FC = () => {
   return (
     <>
       <MetaTags
-        title="Support & Feedback — GradePath"
-        description="Get in touch, suggest university grading schemes, report bugs, or give feedback on GradePath."
+        title="Support & Feedback — GradeForge"
+        description="Get in touch, suggest university grading schemes, report bugs, or give feedback on GradeForge."
         canonicalPath="/contact"
         schema={schema}
       />

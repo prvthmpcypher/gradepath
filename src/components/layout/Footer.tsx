@@ -7,7 +7,7 @@ export const Footer: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
         <div className="space-y-2">
           <p className="m-0 text-ink/90 font-medium">
-            GradePath — An academic notebook for SGPA & CGPA calculations.
+            GradeForge — An academic notebook for SGPA & CGPA calculations.
           </p>
           <p className="m-0 text-xs">
             Built by{' '}

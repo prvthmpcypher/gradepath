@@ -7,8 +7,8 @@ export const HomePage: React.FC = () => {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
-    name: 'GradePath',
-    url: 'https://gradepath.poorvithmp.com/',
+    name: 'GradeForge',
+    url: 'https://gradeforge.poorvithmp.com/',
     applicationCategory: 'EducationalApplication',
     operatingSystem: 'Any',
     description: 'Calculate credit-weighted SGPA and CGPA with preset or custom grading scales without a spreadsheet.',
@@ -27,7 +27,7 @@ export const HomePage: React.FC = () => {
   return (
     <>
       <MetaTags
-        title="GradePath — SGPA and CGPA Calculator"
+        title="GradeForge — SGPA and CGPA Calculator"
         description="Calculate credit-weighted SGPA and CGPA with VTU, Anna University, KTU, Mumbai University, 4.0 GPA, or custom grading scales. Fast, private, browser-local."
         canonicalPath="/"
         schema={schema}
@@ -106,7 +106,7 @@ export const HomePage: React.FC = () => {
               </div>
               <h3 className="text-lg font-serif font-bold text-ink m-0">Target CGPA / What-If Planner</h3>
               <p className="text-gpmuted text-xs sm:text-sm leading-relaxed m-0">
-                Want to reach an 8.5 or 9.0 CGPA before graduation? GradePath calculates the exact SGPA you need across remaining semesters.
+                Want to reach an 8.5 or 9.0 CGPA before graduation? GradeForge calculates the exact SGPA you need across remaining semesters.
               </p>
             </div>
 

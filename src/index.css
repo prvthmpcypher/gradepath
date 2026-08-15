@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Geist+Mono:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --ink: #102a43;
+  --bg: #f7fafc;
+  --paper: #ffffff;
+  --blue: #246bce;
+  --gold: #f4b942;
+  --wash: #dceafe;
+  --red: #d95656;
+  --muted: #52677a;
+  --line: #cad8e5;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --ink: #f7fafc;
+  --bg: #0d1d2b;
+  --paper: #152b3d;
+  --blue: #7db2ff;
+  --gold: #f4b942;
+  --wash: #203d59;
+  --red: #d95656;
+  --muted: #b8c8d6;
+  --line: #345069;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Form controls reset */
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+/* Grade Mark Logo */
+.grade-mark {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 10px);
+  align-items: end;
+  width: 39px;
+  height: 32px;
+}
+
+.grade-mark i {
+  height: 12px;
+  border: 2px solid var(--blue);
+  background-color: transparent;
+}
+
+.grade-mark i:nth-child(2) {
+  height: 19px;
+}
+
+.grade-mark i:nth-child(3) {
+  height: 27px;
+}
+
+.grade-mark b {
+  position: absolute;
+  left: 4px;
+  top: 21px;
+  width: 29px;
+  height: 2px;
+  background: var(--gold);
+  transform: rotate(-28deg);
+  transform-origin: right;
+}
+
+.grade-mark b span {
+  position: absolute;
+  right: -5px;
+  top: -3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--red);
+}
+
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+  header, footer, nav, button {
+    display: none !important;
+  }
+}

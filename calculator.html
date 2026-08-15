@@ -1,1 +1,31 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Calculator — GradePath</title><meta name="description" content="Enter subjects, credits, and grades to calculate SGPA and CGPA."><meta name="theme-color" content="#102A43"><link rel="canonical" href="https://gradepath.poorvithmp.com/calculator"><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/style/style.css"><meta property="og:type" content="website"><meta property="og:title" content="Calculator — GradePath"><meta property="og:description" content="Enter subjects, credits, and grades to calculate SGPA and CGPA."><meta property="og:url" content="https://gradepath.poorvithmp.com/calculator"><meta property="og:image" content="https://gradepath.poorvithmp.com/og.svg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"GradePath calculator","url":"https://gradepath.poorvithmp.com/calculator"}</script></head><body><header class="site-header"><a class="brand" href="index.html"><span class="grade-mark" aria-hidden="true"><i></i><i></i><i></i><b></b></span><strong>GradePath</strong></a><nav aria-label="Primary"><a href="calculator.html">Calculator</a><a href="about.html">About</a><a href="docs.html">Docs</a><a href="contact.html">Support</a><button id="theme-toggle" type="button">Theme</button></nav></header><main><section class="page-lead"><p class="eyebrow">Calculator</p><h1>Your academic notebook</h1><p>Verify the selected scale against your institution’s current official grading scheme.</p></section><section class="calculator-shell"><div class="scale-section"><label for="scale-select">Grading scale</label><select id="scale-select"></select></div><section id="custom-builder" class="custom-builder" hidden><h2>Custom scale</h2><label>Scale name<input id="custom-scale-name" maxlength="60"></label><div id="custom-grades-container"></div><button id="add-custom-grade-btn" class="btn btn-secondary" type="button">Add grade</button><div class="actions"><button id="save-custom-scale-btn" class="btn btn-primary" type="button">Save scale</button><button id="cancel-custom-scale-btn" class="btn btn-secondary" type="button">Cancel</button></div></section><div class="semester-toolbar"><h2>Semesters</h2><button id="add-semester-btn" class="btn btn-primary" type="button">Add semester</button></div><div id="semesters-container"></div><div id="empty-state" class="empty-state"><p>No semesters yet. Add one, then add subjects.</p></div><section class="results-section" aria-labelledby="results-title"><h2 id="results-title">Live results</h2><div class="results-grid"><div><span>Semesters</span><output id="total-semesters">0</output></div><div><span>Overall CGPA</span><output id="overall-cgpa">—</output></div></div><p id="calculator-status" class="status" aria-live="polite">Ready.</p></section></section></main><footer><p>Built by <a href="https://poorvithmp.com">Poorvith M P</a>. Grades stay in this browser.</p><p>Vercel Analytics measures aggregate visits and does not receive grades or calculator entries.</p></footer><script src="assets/js/ui.js"></script><script type="module" src="assets/js/script.js"></script><script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script><script defer src="/_vercel/insights/script.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator — GradePath</title>
+  <meta name="description" content="Enter subjects, credits, and grades to calculate SGPA and CGPA with VTU, Anna University, and custom scales.">
+  <meta name="theme-color" content="#102A43">
+  <link rel="canonical" href="https://gradepath.poorvithmp.com/calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Calculator — GradePath">
+  <meta property="og:description" content="Enter subjects, credits, and grades to calculate SGPA and CGPA.">
+  <meta property="og:url" content="https://gradepath.poorvithmp.com/calculator">
+  <meta property="og:image" content="https://gradepath.poorvithmp.com/og.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "GradePath Calculator",
+    "url": "https://gradepath.poorvithmp.com/calculator",
+    "description": "Enter subjects, credits, and grades to calculate SGPA and CGPA."
+  }
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+</html>

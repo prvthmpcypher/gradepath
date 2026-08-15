@@ -93,10 +93,10 @@ export const AboutPage: React.FC = () => {
               Portfolio Website <ExternalLink className="w-3.5 h-3.5" />
             </a>
             <a
-              href="https://github.com/prvthmpcypher/gradepath"
+              href="https://github.com/prvthmpcypher/gradeforge"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-gpblue hover:underline"
+              className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-gpblue hover:underline"
             >
               GitHub Repository <ExternalLink className="w-3.5 h-3.5" />
             </a>

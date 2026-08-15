@@ -4,74 +4,56 @@
 
 ![GradeForge — your grading scale and a result you can check](docs/assets/cover.svg)
 
-GradeForge is a modern, privacy-first browser-local SGPA and CGPA calculator. Built for students who want a calculation they can repeat, inspect, and trust without turning every semester into another spreadsheet.
+GradeForge is a browser-local SGPA and CGPA calculator I built for students who want accurate calculations without wrestling with spreadsheets every semester.
 
-[Open GradeForge](https://gradeforge.poorvithmp.com) · [View the calculator](docs/assets/product.png) · [My portfolio](https://poorvithmp.com)
+[Open GradeForge](https://gradeforge.poorvithmp.com) · [My Portfolio](https://poorvithmp.com) · [GitHub](https://github.com/prvthmpcypher/gradeforge)
 
-## Main features
+## Why I built this
 
-- **Multi-University Presets**: VTU CBCS, Anna University, Generic 10-point, Mumbai University, KTU, JNTU, and US 4.0 GPA scales.
-- **Custom Grading Scales**: Easily define and save custom letter grades, boundaries, and point scales (0 to 10 or 4.0).
-- **Multiple Semesters**: Editable course names, credits, and live grade calculations.
-- **Target CGPA Planner / What-If Simulator**: Calculate the required SGPA needed across remaining semesters to hit your dream CGPA.
-- **Visual Analytics**: Interactive SGPA progression graph and credit load distribution visualization.
-- **Data Portability**: JSON Backup & Restore + CSV marksheet downloads.
-- **Printable Transcripts**: Generate clean academic performance records and PDF summaries.
-- **Onboarding Flow**: 2-step quickstart with sample engineering semester loader.
-- **First-Party Attribution & Sharing**: Trackable share links, UTM capture, and dark-social discovery polling.
-- **Search Engine Optimized**: Multi-route static prerendering, structured JSON-LD schemas (`SoftwareApplication`, `FAQPage`), and OpenGraph metadata.
-- **100% Browser-Local Privacy**: No accounts, no database tracking. All data remains in your device's browser.
+Most online GPA calculators are packed with ads, break when your university changes grading rules, or force you to sign up. I wanted something fast, clean, and completely private that works offline in your browser.
 
-## Formulas
+## Features
+
+- Presets for VTU CBCS, Anna University, Mumbai University, KTU, JNTU, standard 10-point, and US 4.0 GPA scales.
+- Custom scale builder if your college uses custom grade points.
+- Target CGPA / What-If planner to figure out the exact SGPA you need in upcoming semesters.
+- SGPA progression chart and credit breakdown.
+- Export to CSV or JSON backup, plus a printable transcript format.
+- 100% browser-local storage. No accounts, no database, no tracking of your grades.
+
+## Formula
 
 ```text
 SGPA = Σ(credit × grade point) ÷ Σ(credit)
 ```
 
-CGPA uses the same credit-weighted formula across all completed semesters. Incomplete rows and non-positive credits are automatically skipped. Displayed results use two decimal places.
+CGPA uses the same credit-weighted math across all semesters. Empty rows or incomplete credit entries are skipped automatically.
 
-## Installation and Local Development
-
-GradeForge is built with React 18, TypeScript, Tailwind CSS, and Vite.
+## Running locally
 
 ```bash
-# Clone the repository
-git clone https://github.com/prvthmpcypher/gradepath.git
-cd gradepath
-
-# Install dependencies
+git clone https://github.com/prvthmpcypher/gradeforge.git
+cd gradeforge
 npm install
-
-# Start development server
 npm run dev
 ```
 
-To build for production:
+To build the production bundle:
 
 ```bash
 npm run build
 ```
 
-The production bundle is compiled into `dist/` with static multi-page HTML entry points.
+The output files go straight to `dist/`.
 
-## Built with
+## Contributing
 
-- React 18
-- TypeScript
-- Tailwind CSS
-- Vite
-- Lucide Icons
-- Browser Local Storage
-- Vercel Analytics
+Pull requests are welcome. Check [CONTRIBUTING.md](CONTRIBUTING.md) for how to add university presets or fix bugs.
 
-## Privacy & Limits
+## License
 
-GradeForge stores grading scales, semesters, and subject entries entirely in the browser's local storage. No academic data is sent to external servers.
-
-## Licence
-
-GradeForge is available under the [MIT Licence](LICENSE).
+MIT License. See [LICENSE](LICENSE) for details.
 
 ## Author
 
-Built by [Poorvith M P](https://poorvithmp.com). Find me on [GitHub](https://github.com/prvthmpcypher).
+Built by [Poorvith M P](https://poorvithmp.com). You can find me on [GitHub](https://github.com/prvthmpcypher).

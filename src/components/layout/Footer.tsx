@@ -33,7 +33,7 @@ export const Footer: React.FC = () => {
           <Link to="/docs" className="hover:text-gpblue transition-colors">Formulas & FAQ</Link>
           <Link to="/contact" className="hover:text-gpblue transition-colors">Support</Link>
           <a
-            href="https://github.com/prvthmpcypher/gradepath"
+            href="https://github.com/prvthmpcypher/gradeforge"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gpblue transition-colors"

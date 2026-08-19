@@ -47,7 +47,7 @@ export const ContactPage: React.FC = () => {
               Found a bug or want to propose a new official preset? Open an issue or pull request on GitHub.
             </p>
             <a
-              href="https://github.com/prvthmpcypher/gradeforge/issues"
+              href="https://github.com/poorvith-mp/gradeforge/issues"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-gpblue hover:underline pt-2"

@@ -6,7 +6,7 @@
 
 GradeForge is a browser-local SGPA and CGPA calculator I built for students who want accurate calculations without wrestling with spreadsheets every semester.
 
-[Open GradeForge](https://gradeforge.poorvithmp.com) · [My Portfolio](https://poorvithmp.com) · [GitHub](https://github.com/prvthmpcypher/gradeforge)
+[Open GradeForge](https://gradeforge.poorvithmp.com) · [My Portfolio](https://poorvithmp.com) · [GitHub](https://github.com/poorvith-mp/gradeforge)
 
 ## Why I built this
 
@@ -32,7 +32,7 @@ CGPA uses the same credit-weighted math across all semesters. Empty rows or inco
 ## Running locally
 
 ```bash
-git clone https://github.com/prvthmpcypher/gradeforge.git
+git clone https://github.com/poorvith-mp/gradeforge.git
 cd gradeforge
 npm install
 npm run dev
@@ -56,4 +56,4 @@ MIT License. See [LICENSE](LICENSE) for details.
 
 ## Author
 
-Built by [Poorvith M P](https://poorvithmp.com). You can find me on [GitHub](https://github.com/prvthmpcypher).
+Built by [Poorvith M P](https://poorvithmp.com). You can find me on [GitHub](https://github.com/poorvith-mp).

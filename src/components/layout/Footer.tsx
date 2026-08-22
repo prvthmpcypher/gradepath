@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
             . Grades and custom scales stay securely inside this browser.
           </p>
           <p className="m-0 text-xs text-gpmuted/80">
-            Vercel Analytics measures aggregate visits and does not receive grades or calculator entries.
+            No analytics service receives grades, calculator entries, or page activity.
           </p>
         </div>
 
